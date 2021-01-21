@@ -1,0 +1,295 @@
+body {
+/*Thin 100 italic
+Regular 400
+Bold 700
+plus #297BE9
+icon #C84925
+ok #75D62D
+*/
+
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 380px;
+    height: 100%;
+    background: #faf9f9;
+    /*transition: all 0.3s ease;*/
+}
+
+.sidebar header {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 26px;
+    text-align: center;
+    line-height: 100px;
+    padding-top: 30px;
+    background: #1c56a7;
+    color: whitesmoke;
+    user-select: none;
+}
+
+.sidebar h2 {
+    font-size: 26px;
+    line-height: 80px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: black;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    transition: .4s;
+}
+
+ul li:not(:last-child):hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+    color: #C84925;
+}
+
+.sidebar .fa-plus {
+    margin-right: 16px;
+    color: #297BE9;
+}
+
+main {
+    position: fixed;
+    left: 380px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url('cool-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.photo-description {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    font-size: 38px;
+    font-weight: 800;
+    color: whitesmoke;
+}
+
+.tasks-container {
+    width: 60%;
+    height: 350px;
+    max-height: 350px;
+    overflow: auto;
+}
+
+.tasks-container::-webkit-scrollbar {
+    display: none;
+}
+.tasks-container ul{
+    padding:0;
+    margin:0;
+}
+
+.task {
+    width: 100%;
+    height: 65px;
+    min-width: 445px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    list-style: none;
+}
+
+.task i.co{
+    position: absolute;
+    font-size: 30px;
+    padding-left: 5px;
+    left: 15px;
+    top: 18px;
+    color: #cccccc;
+}
+
+.task i.co:hover {
+    cursor: pointer;
+}
+
+.fa-check-circle{
+    color: #75D62D !important;
+}
+
+.task p.text {
+    position: absolute;
+    font-size: 25px;
+    left: 70px;
+    top: 15px;
+    max-width:485px;
+}
+
+.task p.task-time {
+    position: absolute;
+    font-size: 23px;
+    right: 100px;
+    top: 18px;
+    max-width:485px;
+}
+
+.lineThrough{
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.task i.de {
+    position: absolute;
+    font-size: 28px;
+    right: 16px;
+    top:16px;
+}
+
+.task i.de:hover{
+    color: #ec0000;
+    cursor: pointer;
+}
+
+.add-to-do {
+    position: relative;
+    width: 60%;
+    height: 60px;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.add-to-do input{
+    height: 35px;
+    font-size: 18px;
+}
+
+.add-to-do input[type="text"] {
+margin-right: 20px;
+}
+
+.add-to-do input[type="date"] {
+    margin-right: 20px;
+}
+
+.add-to-do span {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.add-to-do i {
+    margin-right: 5px !important;
+    font-size: 18px;
+}
+
+.selected {
+    color: #297BE9 !important;
+}
+
+#check {
+    display: none;
+}
+
+label #btn, label #cancel {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    body{
+        font-size: 80%;
+    }
+    .add-to-do {
+        height: 200px;
+    }
+
+    .add-to-do input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
+        left: -380px;
+        transition: all 0.3s ease;
+        background:  #faf9f9;
+    }
+
+    main {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    #check {
+        display: none;
+    }
+
+    label #btn, label #cancel {
+        display: block;
+        z-index: 10;
+    }
+
+    label #btn, label #cancel {
+        position: absolute;
+        cursor: pointer;
+        background: midnightblue;
+        border-radius: 4px;
+    }
+
+    label #btn {
+        left: 40px;
+        top: 25px;
+        font-size: 35px;
+        color: whitesmoke;
+        padding: 6px 10px;
+    }
+
+    label #cancel {
+        z-index: 1111;
+        left: -380px;
+        top: 13px;
+        font-size: 30px;
+        color: #fafafa;
+        padding: 4px 9px;
+        transition: all 0.3s ease;
+    }
+
+    #check:checked ~ .sidebar {
+        left: 0;
+
+    }
+
+    #check:checked ~ label #cancel {
+        left: 330px;
+        z-index: 9999;
+    }
+
+    #check:checked ~ label #btn {
+        z-index: -1;
+    }
+}

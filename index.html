@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    <i class="far fa-check-circle"></i>
+    <i class="far fa-circle"></i>
+    -->
+    <meta charset="UTF-8">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <title>Zrób to dziś!</title>
+</head>
+<body>
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+<div class="sidebar">
+    <header>
+        <h1>Planer Zadań</h1>
+    </header>
+    <h2>Twoje listy zadań</h2>
+    <ul id="lists">
+        <li><a href="#" id="1" class=""><i class="fas fa-list-ul"></i> Do zrobienia </a></li>
+        <li><a href="#" id="2" class=""><i class="fas fa-list-ul"></i> Zakupy </a></li>
+        <li><a href="#" id="0" class=""><i class="fas fa-plus"></i> Nowa lista zadań </a></li>
+    </ul>
+</div>
+
+    <main>
+        <div class="photo-container">
+            <div class="photo-description" id="photo-description">Wybierz listę</div>
+        </div>
+        <div class="tasks-container">
+
+            <ul id="list">
+                <!--                <li class="task">-->
+                <!--                    <i class="far fa-circle co"></i>-->
+                <!--                    <p class="text">Zrobić pranie</p>-->
+                <!--                    <p class="task-time">15.01.2020</p>-->
+                <!--                    <i class="far fa-trash-alt de"></i>-->
+                <!--                </li>-->
+            </ul>
+        </div>
+
+        <div class="add-to-do">
+            <input type="text" id="input-title" placeholder="Tytuł zadania">
+            <input type="date" id="input-date">
+            <span id="add_item"> <i class="fas fa-plus"></i>
+            Dodaj zadanie</span>
+        </div>
+    </main>
+<script src="htmlapp.js"></script>
+</body>
+</html>
