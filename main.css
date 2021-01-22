@@ -67,7 +67,7 @@ ul li:not(:last-child):hover a{
     color: #C84925;
 }
 
-.sidebar .fa-plus {
+.fa-plus {
     margin-right: 16px;
     color: #297BE9;
 }
@@ -79,6 +79,9 @@ main {
     width: 100%;
     height: 100%;
     overflow: auto;
+}
+i.fas.fa-plus {
+    color: #297BE9;
 }
 
 .photo-container {
@@ -220,9 +223,6 @@ label #btn, label #cancel {
 }
 
 @media only screen and (max-width: 1000px) {
-    /*body{*/
-    /*    font-size: 80%;*/
-    /*}*/
     .add-to-do {
         height: 200px;
     }
@@ -246,6 +246,9 @@ label #btn, label #cancel {
         z-index: -1;
     }
 
+    .tasks-container {
+        width: 90%;
+    }
     #check {
         display: none;
     }
@@ -286,7 +289,7 @@ label #btn, label #cancel {
     }
 
     #check:checked ~ label #cancel {
-        left: 330px;
+        left: 80%;
         z-index: 9999;
     }
 
