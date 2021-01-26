@@ -38,7 +38,7 @@ class DbService {
             console.log(error)
         }
     }
-    //INSERT INTO task (Title, List_ID, Done, Task_Date) VALUES ('czesc', 1, 0, '1999-09-01');
+    //INSERT INTO task (Title, List_ID, Done, Task_Date) VALUES ('Zakupy', 1, 0, '1999-09-01');
 
     async insertNewTask(task){
         try {

@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    //
+      <i class="far fa-check-circle"></i>
+      <i class="far fa-circle"></i>
+    meta(charset='UTF-8')
+    script(src='https://kit.fontawesome.com/a076d05399.js')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Fraunces:wght@400&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    title Zrób to dziś!
+  body
+    input#check(type='checkbox')
+    label(for='check')
+      i#btn.fas.fa-bars
+      i#cancel.fas.fa-times
+    .sidebar
+      header
+        h1 Planer Zadań
+      h2 Twoje listy zadań
+      ul#lists
+        li
+          a#1(href='#')
+            i.fas.fa-list-ul
+            |  Do zrobienia
+        li
+          a#2(href='#')
+            i.fas.fa-list-ul
+            |  Zakupy
+        li
+          a#0(href='#')
+            i.fas.fa-plus
+            |  Nowa lista zadań
+    main
+      .photo-container
+        #photo-description.photo-description Wybierz listę
+      .tasks-container
+        ul#list
+          // <li class="task">
+          // <i class="far fa-circle co"></i>
+          // <p class="text">Zrobić pranie</p>
+          // <p class="task-time">15.01.2020</p>
+          // <i class="far fa-trash-alt de"></i>
+          // </li>
+      .add-to-do
+        input#input-title(type='text' placeholder='Tytuł zadania')
+        input#input-date(type='date')
+        span#add_item
+          i.fas.fa-plus
+          |             Dodaj zadanie
+    script(src='/javascripts/htmlapp.js')
